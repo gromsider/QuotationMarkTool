@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "QuotationMarkTool": {
+      "commandName": "Project",
+      "commandLineArgs": "-p \"INPUTS\" -o \"OUTPUTS\\\""
+    }
+  }
+}
