@@ -31,21 +31,10 @@ namespace QuotationMarkTool
 
                 foreach (string line in File.ReadLines(files[i]))
                 {
-                    //File.AppendAllText(absoluteOutputPath, $"\"«{splitLine[0]}»\",{splitLine[1]}\n");
-                    //Console.WriteLine($"\"«{splitLine[0]}»\",{splitLine[splitLine.Length - 1]}");
-
                     File.AppendAllText(absoluteOutputPath, $"\"«{line.Substring(0, line.LastIndexOf(","))}»\",{line.Substring(line.LastIndexOf(",") + 1)}\n");
-                    //Console.WriteLine($"\"«{line.Substring(0, line.LastIndexOf(","))}»\",{line.Substring(line.LastIndexOf(",") + 1)}");
                 }
 
                 Console.WriteLine($"\nФайл \"{fileName}\" перезаписан в {absoluteOutputPath}");
-
-                /*string[] text = File.ReadAllLines(path[i]);
-                for (int x = 0; x < text.Length; x++)
-                {
-                    File.AppendAllText(absoluteOutputPath, $"\"{text[x]}\", \" по программе \"\"{text[x]}\"\"\", \"{text[x]}\"\n");
-                }
-                Console.WriteLine($"\nФайл \"{fileName}\" перезаписан в {absoluteOutputPath}");*/
             }
         }
     }
